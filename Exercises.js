@@ -1,16 +1,19 @@
 //Question 1
 function myReverse(str) {
-  // your code here
-  return "";
+    let newStr="";
+    for(let i=str.length-1; i>=0; i--){
+        newStr+= str[i];
+    }
+    return newStr;
 }
 
 //Question 2
 function allCombinations(str) {
   let combinations = [];
-  // your code here
+ //your code here 
 
-  //
-  return combinations;
+ //
+    return combinations;
 }
 
 //Question 3
@@ -39,8 +42,11 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
+console.log(myReverse("encyclopedia"));// ex. 1
+console.log(allCombinations("dog"));
 
-// *** End of Playground ***
+
+// *** End of Playground ***    
 
 // Don't touch me :)
 exports.myReverse = myReverse;
