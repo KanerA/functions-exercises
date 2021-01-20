@@ -9,25 +9,38 @@ function myReverse(str) {
 
 //Question 2
 function allCombinations(str) {
-  let combinations = [];
-  let middle= Math.floor(str.length/2);
-  for(let i=0; i<str.length; i++){
-    if(i===middle){
-      combinations.push(str);
-    }
-      combinations.push(str[i]);
-      if(i<str.length-1){
-      combinations.push(str[i]+str[i+1]);
+    let combinations = [];
+    let middle= Math.floor(str.length/2);
+    for(let i=0; i<str.length; i++){
+      if(i===middle){
+        combinations.push(str);
       }
-    }
+        combinations.push(str[i]);
+        if(i<str.length-1){
+        combinations.push(str[i]+str[i+1]);
+        }
+      }
     return combinations;
 }
 
 //Question 3
 function allCaps(str) {
-  // your code here
-  return "";
+    const newStr= str.split(" ");
+    let capWord;
+    let finalStr=[];
+    for(let i=0; i<newStr.length; i++){
+        capWord = newStr[i].charAt(0).toUpperCase() + newStr[i].slice(1);
+        finalStr.push(capWord);
+    }
+    finalStr= finalStr.join(" ");
+
+    return finalStr;
 }
+
+
+
+
+
 
 //Question 4
 function myPower(x, n) {
@@ -49,10 +62,9 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-console.log(myReverse("Hello"));// ex. 1
-console.log(allCombinations("dog"));// ex. 2
-
-
+// console.log(myReverse("Hello"));// ex. 1
+// console.log(allCombinations("dog"));// ex. 2
+console.log(allCaps("i am a cyber4s student"));
 // *** End of Playground ***    
 
 // Don't touch me :)
