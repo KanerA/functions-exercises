@@ -83,9 +83,22 @@ function getFirstNotRepeating(str) {
 
 //Question 6 (Bonus)
 function isPrefectNumber(num) {
-  // your code here
-  return "I'm not interested in the bonus question :(";
+  let count=0;
+  for(let i=1; i<num; i++){
+    if(num%i===0){
+      count+=i;
+    }
+  }
+  if(count===num){
+  return true;
+  }
+  else{
+    return false;
+  }
+ 
+  // return "I'm not interested in the bonus question :("; psych!
 }
+console.log(isPrefectNumber(8128));
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
@@ -93,7 +106,7 @@ function isPrefectNumber(num) {
 // console.log(allCombinations("dog"));// ex. 2
 // console.log(allCaps("i am a cyber4s student"));
 // console.log(myPower(3,5));
-console.log(getFirstNotRepeating("dad"));
+// console.log(getFirstNotRepeating("dad"));
 // *** End of Playground ***    
 
 // Don't touch me :)
