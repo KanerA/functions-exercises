@@ -37,16 +37,27 @@ function allCaps(str) {
     return finalStr;
 }
 
-
-
-
-
-
 //Question 4
 function myPower(x, n) {
-  // your code here
-  return "";
+  let power=1;
+  if(n>1 || n===0){  
+    for(let i=n; i>0; i--){
+      power=power*x
+    }
+    return power;
+  }
+  else{
+    return x;
+  }
 }
+// for negative exponents.
+// else if(n<0){
+//   for(let i=n; i>0; i--){
+//     power=(power*x);
+//   }
+//   return 1/power;
+// }
+////////////////////////////////////////////////
 
 //Question 5
 function getFirstNotRepeating(str) {
@@ -64,7 +75,8 @@ function isPrefectNumber(num) {
 // Feel free to run and test your code here on your own
 // console.log(myReverse("Hello"));// ex. 1
 // console.log(allCombinations("dog"));// ex. 2
-console.log(allCaps("i am a cyber4s student"));
+// console.log(allCaps("i am a cyber4s student"));
+console.log(myPower(3,5));
 // *** End of Playground ***    
 
 // Don't touch me :)
