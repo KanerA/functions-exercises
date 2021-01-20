@@ -10,9 +10,16 @@ function myReverse(str) {
 //Question 2
 function allCombinations(str) {
   let combinations = [];
- //your code here 
-
- //
+  let middle= Math.floor(str.length/2);
+  for(let i=0; i<str.length; i++){
+    if(i===middle){
+      combinations.push(str);
+    }
+      combinations.push(str[i]);
+      if(i<str.length-1){
+      combinations.push(str[i]+str[i+1]);
+      }
+    }
     return combinations;
 }
 
@@ -42,8 +49,8 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-console.log(myReverse("encyclopedia"));// ex. 1
-console.log(allCombinations("dog"));
+console.log(myReverse("Hello"));// ex. 1
+console.log(allCombinations("dog"));// ex. 2
 
 
 // *** End of Playground ***    
