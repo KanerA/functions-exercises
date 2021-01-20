@@ -61,8 +61,24 @@ function myPower(x, n) {
 
 //Question 5
 function getFirstNotRepeating(str) {
-  // your code here
-  return "";
+  let chr="";
+  let counter=0;
+  let newStr=str;
+  for(let i=0; i<newStr.length; i++){
+    for(let j=1; j<newStr.length; j++){
+      if(newStr[i]===newStr[j]){
+        if(i!==j){
+          counter++;
+        }
+      }
+    }
+     if(counter===0){
+      chr = newStr[i];
+      break;
+    }
+    counter=0; 
+  }
+  return chr;
 }
 
 //Question 6 (Bonus)
@@ -76,7 +92,8 @@ function isPrefectNumber(num) {
 // console.log(myReverse("Hello"));// ex. 1
 // console.log(allCombinations("dog"));// ex. 2
 // console.log(allCaps("i am a cyber4s student"));
-console.log(myPower(3,5));
+// console.log(myPower(3,5));
+console.log(getFirstNotRepeating("dad"));
 // *** End of Playground ***    
 
 // Don't touch me :)
